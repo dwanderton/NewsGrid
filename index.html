@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="David Anderton 2013">
+
+    <title>ForwardComms</title>
+
+    <!-- Bootstrap core CSS -->
+<!-- Latest compiled and minified CSS -->
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/grid.css" rel="stylesheet">
+  <!-- attempt to get bg working -->
+<style type="text/css">
+body { background: url(./img/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
+  <!-- lets get ac working -->
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery.min.js"></script>
+    
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- end jQuery-->
+  <link rel="stylesheet" href="./css/jquery-ui.css" />
+  <script src="./js/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#accordion" ).accordion({autoHeight: false,heightStyle: "content" });
+    
+  });
+  </script>
+  <!-- end get ac working -->
+  <!--start gmapapi -->
+<style>
+      html, body, #map-canvasLDN {
+        margin: 0;
+        padding: 0;
+      height:100%;
+      }
+      html, body, #map-canvasNYC {
+        margin: 0;
+        padding: 0;
+      height:100%;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+var mapLDN;
+var mapNYC;
+function initialize() {
+  var mapOptionsLDN = {
+    zoom: 18,
+    center: new google.maps.LatLng(51.5136, -0.0980),
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+  };
+  var mapOptionsNYC = {
+    zoom: 18,
+    center: new google.maps.LatLng(40.6897, -74.0444800000002),
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+  };
+
+  mapLDN = new google.maps.Map(document.getElementById('map-canvasLDN'),
+      mapOptionsLDN);
+
+  mapNYC = new google.maps.Map(document.getElementById('map-canvasNYC'), mapOptionsNYC);
+
+    var OfficeLDN = new google.maps.Marker(
+    {
+        position: new google.maps.LatLng(51.5136, -0.0980),
+        map: mapLDN,
+        title:"London Office"
+   });
+    var OfficeNYC = new google.maps.Marker(
+    {
+        position: new google.maps.LatLng(40.6897, -74.0444800000002),
+        map: mapNYC,
+        title:"New York Office"
+   });
+
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+    </script>
+
+<!--resize screen-->
+<script>
+  $(document).ready(function() {
+  $('h3').click(function() {
+  google.maps.event.trigger(mapLDN, 'resize');
+  mapLDN.setCenter(new google.maps.LatLng(51.5136, -0.0980));
+  google.maps.event.trigger(mapNYC, 'resize');
+  mapNYC.setCenter(new google.maps.LatLng(40.6897, -74.0444800000002));     
+       });
+          });
+</script>
+<!-- end map api-->
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+          <h2><b>ForwardComms</b></h2>
+          <!-- start ac -->
+	     
+          <div id="accordion">
+                        <h3><b>Our Mission</b></h3>
+            <div>
+              <p>
+              We look to provide:
+              </p>
+              <ul>
+                <li>List item one</li>
+                <li>List item two</li>
+                <li>List item three</li>
+              </ul>
+
+</div>
+	    <h3><b>London</b></h3>
+            <div>
+              <p>
+              St. Paul's Churchyard</br>London</br>EC4M 8AD 
+              </p>
+	      <div style="height: 350px; ">
+	      <div id="map-canvasLDN"></div>
+	      </div>
+	      </div>
+            <h3><b>New York</b></h3>
+            <div>
+              <p>
+              Liberty Island</br>New York</br>NY 10004 
+              </p>
+	      <div style="height: 350px; ">
+	      <div id="map-canvasNYC"></div>
+	      </div>
+	      </div>
+            <h3><b>Portfolio</b></h3>
+            <div>
+              <p>
+              The following urls are examples of our work:</br>
+              <a href="#"> http://www.google.com</a></br> 
+              <a href="#"> http://www.bbc.co.uk</a></br>
+              </p>
+            </div>
+            <h3><b>Contact</b></h3>
+            <div>
+              <p>
+              Send an email to: none@forwardcomms.com 
+              </p>
+            </div>
+          </div>
+
+          <!-- end ac -->
+	  </br>
+	  <!-- AddThis Button BEGIN -->
+	  <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+	    <a class="addthis_button_facebook"></a>
+	    <a class="addthis_button_twitter"></a>
+	    <a class="addthis_button_google_plusone_share"></a>
+	    <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
+	  </div>
+	  </br>
+	  <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+	  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5207fc116b0fd93a"></script>
+	  <!-- AddThis Button END -->
+        </div>
+      </div>
+
+
+    </div> <!-- /container -->
+
+<style>.myToolbar {z-index:100000} .myToolbar .tb_btn {cursor:pointer;border:1px solid #555;padding:3px}   .tb_highlight{background-color:yellow} .tb_hide {visibility:hidden}</style><style>.tb_button {padding:2px;cursor:pointer;border-right: 1px solid #8b8b8b;border-left: 1px solid #FFF;border-bottom: 1px solid #fff;}.tb_button.hover {borer:2px outset #def; background-color: #f8f8f8 !important;}
+
+</style>
+
+
+
+
+
+</body><!--DavidAnderton2013--></html>
