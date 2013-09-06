@@ -14,7 +14,7 @@
  
 #$result = pg_query($db, "SELECT statement goes here");
 
-require("/includes/config.php");
+require("./includes/config.php");
 
 
 ngrender("grid.php", []);
