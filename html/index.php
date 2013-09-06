@@ -14,5 +14,10 @@
  
 #$result = pg_query($db, "SELECT statement goes here");
 #
-ngrender("grid.php", []);
+
+#add in echos syntax error may be down to php version.
+echo "Hello!";
+phpinfo();
+
+# ngrender("grid.php", []);
 ?>
