@@ -16,7 +16,7 @@
 #
 
 #add in echos syntax error may be down to php version.
-echo "Hello!";
+echo "Hello! Should be 5.4 now?";
 phpinfo();
 
 # ngrender("grid.php", []);
