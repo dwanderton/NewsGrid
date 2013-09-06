@@ -14,9 +14,8 @@
  
 #$result = pg_query($db, "SELECT statement goes here");
 
-#add in echos syntax error may be down to php version.
-echo "Hello! Should be 5.4 now?";
-phpinfo();
+require("/includes/config.php");
+
 
 ngrender("grid.php", []);
 ?>

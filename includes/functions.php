@@ -314,16 +314,16 @@
     function ngrender($template, $values = [])
     {
         // if template exists, render it
-        if (file_exists("../templates/$template"))
+        if (file_exists("/templates/$template"))
         {
             // extract variables into local scope
             extract($values);
 
             // render header
-            require("../templates/ngheader.php");
+            require("/templates/ngheader.php");
 
             // render template
-            require("../templates/$template");
+            require("/templates/$template");
 
         }
 
