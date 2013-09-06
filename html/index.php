@@ -14,5 +14,6 @@
  
 #$result = pg_query($db, "SELECT statement goes here");
 #
-echo "Hello World :)";
+#echo "Hello World :)";
+ngrender("grid.php", []);
 ?>
