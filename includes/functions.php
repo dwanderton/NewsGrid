@@ -320,10 +320,10 @@
             extract($values);
 
             // render header
-            require("/templates/ngheader.php");
+            require("./templates/ngheader.php");
 
             // render template
-            require("/templates/$template");
+            require("./templates/$template");
 
         }
 
