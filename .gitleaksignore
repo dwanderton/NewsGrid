@@ -1,0 +1,4 @@
+# Historical findings baselined 2026-11-12 (reviewed; see security sweep notes).
+34cac2e65909fa21a0abe60ee59541f2f2932e4b:index.php:generic-api-key:5
+878411f9b5146a4b084911c80966aec2a9e1e60e:index.php:generic-api-key:5
+8a21c9f37623b47d5ea3741b4c4a51bc21354a51:index.php:generic-api-key:5
